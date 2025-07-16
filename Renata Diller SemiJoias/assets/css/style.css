@@ -27,7 +27,7 @@ body {
 
 /* Header */
 header {
-  background-color: var(--light-beige);
+  background-color: var(--accent-gray);
   border-bottom: 1px solid var(--accent-gray);
   padding: 1rem 0;
 }

@@ -244,8 +244,6 @@ function checkout() {
   message += `*Total do Pedido: R$ ${total.toFixed(2).replace(".", ",")}*\n\n`;
   message += "Gostaria de finalizar este pedido!";
 
-  // Substitua pelo seu número de WhatsApp (código do país + DDD + número)
-  const whatsappNumber = "5511999999999";
   const whatsappUrl = `https://wa.me/${5522999584945}?text=${encodeURIComponent(
     message
   )}`;
@@ -255,27 +253,16 @@ function checkout() {
 
 // Show notification
 function showNotification(message) {
-  // Simple notification - you can enhance this
   const notification = document.createElement("div");
-  notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #d8c8b8;
-        color: #6f5846;
-        padding: 15px 20px;
-        border-radius: 5px;
-        z-index: 10000;
-        font-weight: bold;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        opacity: 0.9;
-    `;
+  notification.className = "notification";
   notification.textContent = message;
+
   document.body.appendChild(notification);
 
+  // Remove após animação (dura 2s)
   setTimeout(() => {
-    document.body.removeChild(notification);
-  }, 1500);
+    notification.remove();
+  }, 2000);
 }
 
 // Close modals when clicking outside

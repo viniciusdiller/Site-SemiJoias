@@ -335,6 +335,41 @@ main {
   background-color: #128c7e;
 }
 
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #d8c8b8;
+  color: #6f5846;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInOut 2s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
 /* Footer */
 footer {
   background-color: var(--accent-gray);

@@ -204,7 +204,7 @@ function displayCartItems() {
                 <strong>R$ ${itemTotal.toFixed(2).replace(".", ",")}</strong>
                 <button onclick="removeFromCart(${
                   item.id
-                })" style="margin-left: 10px; background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Remover</button>
+                })" style="margin-left: 10px; background: #d8c8b8; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Remover</button>
             </div>
         `;
     cartItemsContainer.appendChild(cartItem);
@@ -261,8 +261,8 @@ function showNotification(message) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #25D366;
-        color: white;
+        background: #d8c8b8;
+        color: #6f5846;
         padding: 15px 20px;
         border-radius: 5px;
         z-index: 10000;

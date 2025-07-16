@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renata Diller Semijoias - Elegância e Sofisticação</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img src="./assets/images/logo.jpg" alt="Renata Diller Logo" />
+            <div class="logo-text">
+              <h1>Renata Diller</h1>
+              <p>SEMIJOIAS</p>
+            </div>
+          </div>
+          <div class="cart-icon" onclick="openCart()">
+            🛍️ Carrinho
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <div class="container">
+        <div class="nav-categories">
+          <button class="category-btn active" onclick="filterProducts('todos')">
+            Todos
+          </button>
+          <button class="category-btn" onclick="filterProducts('aneis')">
+            Anéis
+          </button>
+          <button class="category-btn" onclick="filterProducts('brincos')">
+            Brincos
+          </button>
+          <button class="category-btn" onclick="filterProducts('colares')">
+            Colares
+          </button>
+          <button class="category-btn" onclick="filterProducts('pulseiras')">
+            Pulseiras
+          </button>
+          <button class="category-btn" onclick="filterProducts('conjunto')">
+            Conjunto
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="hero">
+          <h2>Elegância e Sofisticação</h2>
+          <p>Descubra nossa coleção exclusiva de semijoias</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </main>
+
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-product-image" id="modalProductImage"></div>
+        <h3 id="modalProductName"></h3>
+        <p class="product-price" id="modalProductPrice"></p>
+        <div class="quantity-selector">
+          <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+          <input
+            type="number"
+            class="quantity-input"
+            id="quantityInput"
+            value="1"
+            min="1"
+          />
+          <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+        </div>
+        <button class="add-to-cart" onclick="addToCart()">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+
+    <div id="cartModal" class="modal cart-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h3>Seu Carrinho</h3>
+        <div id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">Total: R$ 0,00</div>
+        <button class="checkout-btn" onclick="checkout()">
+          Finalizar Pedido via WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 Renata Diller Semijoias. Todos os direitos reservados.
+        </p>
+        <p>Elegância e qualidade em cada peça</p>
+
+        <a href="https://api.whatsapp.com/send/?phone=5522999584945"
+          ><p>Entre em contato diretamente pelo WhatsApp por aqui!</p></a
+        >
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
